@@ -39,7 +39,7 @@ function activate(context) {
 			
 			editBuilder.replace(rangeFromCursorToEdit, "");
 
-			if (nextChar == ")" || nextChar == "]" || nextChar == "}") {
+			if (nextChar == ")" || nextChar == "]" || nextChar == "}" || nextChar == "") {
 				vscode.commands.executeCommand('cursorRight');
 			}
 		})     
