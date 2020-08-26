@@ -12,7 +12,7 @@ function activate(context) {
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "remove-whitespace-close-paren" is now active!');
+	console.log('The extension "remove-whitespace-close-paren" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
@@ -20,8 +20,8 @@ function activate(context) {
 	let disposable = vscode.commands.registerCommand('extension.remove-whitespace-close-paren', function () {
 		// The code you place here will be executed every time your command is executed
 
-		const editor = vscode.window.activeTextEditor        
-		
+		var editor = vscode.window.activeTextEditor;
+
 		const cursorPosition = editor.selection.end;
 		const startPosition = new vscode.Position(0,0);
 		const rangeToCursor = new vscode.Range(startPosition, cursorPosition);
